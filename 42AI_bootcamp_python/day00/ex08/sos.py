@@ -21,8 +21,7 @@ code = {
 def encodeMorse(data):
     for word in data:
         for i in word:
-            if ((i < 'A' or i > 'Z') and (i < 'a' or i > 'z') and
-                    (i < '0' or i > '9') and (i != ' ')):
+            if not i.isalpha() and not i.isdigit() and (i != ' '):
                 print("ERROR")
                 sys.exit()
     result = list()
@@ -31,7 +30,7 @@ def encodeMorse(data):
             if letter == ' ':
                 result.append('/')
             else:
-                if letter > 'a' and letter < 'z':
+                if letter.islower():
                     letter = letter.upper()
                 result.append(code[letter])
             result.append(' ')
