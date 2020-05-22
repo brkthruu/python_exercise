@@ -18,7 +18,7 @@ code = {
         }
 
 
-def encodeMorse(data):
+def encode_morse(data):
     for word in data:
         for i in word:
             if not i.isalpha() and not i.isdigit() and (i != ' '):
@@ -39,5 +39,5 @@ def encodeMorse(data):
     return ''.join(result)
 
 
-result = encodeMorse(sys.argv[1:])
+result = encode_morse(sys.argv[1:])
 print(result)
