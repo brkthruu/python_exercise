@@ -6,8 +6,8 @@ def lcg(seed, loop, m=2**32, a=214013, c=2531011):
 
 
 def generator(text, sep=" ", option=None):
-    '''Option is an optional arg, sep is mandatory'''
-    if type(text)! = str:
+    """Option is an optional arg, sep is mandatory"""
+    if type(text) is not str:
         print("ERROR: Text should be string.")
         return 0
     elif option not in ["shuffle", "unique", "ordered", None]:
